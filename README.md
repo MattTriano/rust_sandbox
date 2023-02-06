@@ -94,3 +94,68 @@ To automatically build and run a project in one command, use
 ```bash
 $ cargo run
 ```
+
+# Language Facts and Concepts
+
+## Variables
+
+Fact: Variables are immutable 
+
+## Types
+
+### Scalar types
+Rust has four primary scalar types: integers, floating point numbers, booleans, and characters
+
+Integers:
+* Signed: `i8`, `i16`, `i32`, `i64`, `i128`, `isize` (same size as an address on the system: 32 or 64 bits)
+* Unsigned: `u8`, `u16`, `u32`, `u64`, `u128`, `usize` (same size as system architecture: 32 or 64 bits)
+* Default: `i32`
+* Example usage: 
+    * `let x: u32 = 25;`
+    * `let y = 34;`
+
+Floats: 
+* `f32`, `f64`
+* Example usage:
+    * `let x_f: f64 = -87.619283;`
+    * `let y_f = 41.877846;`
+
+Booleans:
+* `bool` (`true` or `false`)
+* Example usage:
+    * `let x_t: bool = true;`
+    * `let y_f = false;`
+
+Characters:
+* `char` (unicode; 4-byte width)
+* Note: define `char`s with single quotes. Double quotes are for strings. 
+* Example usage:
+    * `let x_c = 'c';`
+    * `let y_c: char = 'y';`
+    * `let heart_eyed_cat = '😻';`
+
+### Compound Types
+These can group different 
+
+Tuple: 
+* `(u64, char, bool, ...)` 
+* Can hold elements of different types.
+* Example usage:
+    * `let x_tuple: (i8, char, bool) = (30, 'U', true);`
+* Access values via:
+    * `x_tuple.<index>`
+    * `x_tuple.0`
+
+Array:
+* Can only hold elements of the same type.
+* Useful when implementing a stack or when the number of elements is known and fixed.
+* Example usage:
+    * `let arr_i = [0, 1, 2, 3];`
+    * `let arr_e: [u16; 4] = [10, 11, 12, 13];`
+* Access values via:
+    * `arr_i[<index>]`
+    * `arr_i[0]`
+
+### Syntax
+
+[Glossary of Rust's syntax](https://doc.rust-lang.org/book/appendix-02-operators.html)
